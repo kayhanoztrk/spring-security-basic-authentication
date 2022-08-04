@@ -1,0 +1,5 @@
+INSERT INTO user (id,username,password) VALUES (1,'user','user')
+INSERT INTO user (id,username,password) VALUES (2,'admin','admin')
+INSERT INTO role (role_id,role_name) VALUES (1,'ROLE_USER')
+INSERT INTO role (role_id,role_name) VALUES (2,'ROLE_ADMIN')
+INSERT INTO user_role (user_id,role_id) VALUES (1,1),(2,2)
