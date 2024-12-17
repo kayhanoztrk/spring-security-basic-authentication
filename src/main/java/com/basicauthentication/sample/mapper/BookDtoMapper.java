@@ -14,4 +14,12 @@ public class BookDtoMapper {
                 .price(book.getPrice())
                 .build();
     }
+
+    public Book convertDtoToEntity(BookDto bookDto){
+        Book book = new Book();
+        book.setName(bookDto.getName());
+        book.setPrice(bookDto.getPrice());
+
+        return book;
+    }
 }

@@ -39,7 +39,8 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public BookDto create(Book book) {
+    public BookDto create(BookDto bookDto) {
+        Book book = bookDtoMapper.convertDtoToEntity(bookDto);
         Book savedBook =  bookRepository.save(book);
         return bookDtoMapper.convertToDto(book);
     }
